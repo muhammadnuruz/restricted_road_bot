@@ -30,7 +30,7 @@ async def handle_message(message: Message):
                             with open(image_url, "rb") as photo_file:
                                 await message.reply_photo(
                                     photo=photo_file,
-                                    caption=f"Yo'l nomi: {name}"
+                                    caption=name
                                 )
                             break
         except Exception as e:
