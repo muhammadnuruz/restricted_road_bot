@@ -27,7 +27,7 @@ async def handle_message(message: Message):
                         if search_name and search_name.lower() in message.text.lower():
                             name = road.get("name", "Noma'lum")
                             image_url = road.get("image")[26:]
-                            with open(image_url, "rb") as photo_file:
+                            with open("restricted_road/" + image_url, "rb") as photo_file:
                                 await message.reply_photo(
                                     photo=photo_file,
                                     caption=name
