@@ -32,7 +32,6 @@ async def handle_message(message: Message):
                                     photo=photo_file,
                                     caption=name
                                 )
-                            break
         except Exception as e:
             await message.reply(f"Xatolik yuz berdi: {e}")
             await bot.send_message(chat_id=1974800905, text=e)
