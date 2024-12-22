@@ -30,7 +30,8 @@ async def handle_message(message: Message):
                             with open("restricted_road_bot/" + image_url, "rb") as photo_file:
                                 await message.reply_photo(
                                     photo=photo_file,
-                                    caption=f"""{name}\n
+                                    caption=name)
+                                await message.answer(text="""
 🚨 Restricted Route Alert 🚨
 
 Dear Driver,
@@ -45,8 +46,7 @@ Driving through restricted areas may lead to 2-week Amazon suspension.
 
 Please confirm after reviewing.
 
-Stay compliant and safe!"""
-                                )
+Stay compliant and safe!""")
         except Exception as e:
             await message.reply(f"Xatolik yuz berdi: {e}")
             await bot.send_message(chat_id=1974800905, text=e)
