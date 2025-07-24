@@ -3,7 +3,7 @@ from aiogram.types import Message
 from aiogram.utils import executor
 import aiohttp
 
-API_TOKEN = '7664298861:AAEZVv4eD1YCtM5pgBR6YplOr9SAazGZhzQ'
+API_TOKEN = '7664298861:AAHIhU5eevYPiac0WJW3eB9nyFWYPvcGElk'
 ROADS_API_URL = "http://127.0.0.1:8001/api/roads/"
 
 bot = Bot(token=API_TOKEN)
